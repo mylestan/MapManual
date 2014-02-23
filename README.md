@@ -4,6 +4,8 @@
 
 **MapManual is a prototype workflow tool for manually creating geo-location data sets.**
 
+[mylestan.github.io/MapManual](http://mylestan.github.io/MapManual/)
+
 ## Motivation
 
 MapManual was created as part of Open Data Day 2014, and was inspired by the manual work required by the team to create their desired geographic data set.
