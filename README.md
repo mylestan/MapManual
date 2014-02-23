@@ -1,6 +1,6 @@
 # MapManual
 
-![Screenshot of MapManual](http://raw2.github.com/mylestan/MapManual/master/screenshots/screenshot1.png)
+![Screenshot of MapManual](http://raw.github.com/mylestan/MapManual/master/screenshots/screenshot1.png)
 
 **MapManual is a prototype workflow tool for manually creating geo-location data sets.**
 
