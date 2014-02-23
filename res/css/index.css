@@ -1,0 +1,43 @@
+/* Basic css */
+html { height: 100% }
+body { height: 100%; margin: 0; padding: 0 }
+
+#map-canvas {
+	height: 100%;
+}
+
+#inputs-widget{
+	position: absolute;
+	right: 10px;
+	top: 50px;
+
+	min-width: 350px;
+	min-height: 250px;
+
+	padding: 10px;
+
+	background-color: #FFF;
+}
+
+#places-widget{
+	position: absolute;
+	right: 10px;
+	top: 350px;
+
+	min-width: 350px;
+	min-height: 300px;
+
+	padding: 10px;
+
+	background-color: #FFF;
+}
+
+#places-table{
+	height: 250px;
+
+	overflow: scroll;
+}
+
+#list-description{
+	float: left;
+}

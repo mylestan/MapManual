@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="res/css/index.css">
+    <link rel='stylesheet' type='text/css' href='res/css/bootstrap/css/bootstrap.min.css'>
+  </head>
+
+  <body id='app'>
+
+    <div id="map-canvas"></div>
+
+    <div id='inputs-widget'>
+      <form role="form">
+        <div class="form-group">
+          <label>Coordinates</label>
+          <input type="text" class="form-control input-sm" id="input-lat" placeholder="-85.00">
+          <input type="text" class="form-control input-sm" id="input-lng" placeholder="45.00">
+        </div>
+      </form>
+      <form role='form'>
+        <div class="form-group">
+          <label>Description</label>
+          <input type="text" class="form-control input-sm" id="input-description" placeholder="SCH South">
+        </div>
+        <button id='btn-create' type="button" class="btn btn-primray">Create</button>
+      </form>
+    </div>
+
+    <div id='places-widget'>
+      <label>Places</label>
+      <div id='places-table'>
+        <table class='table table-hover table-condensed'>
+          <tbody id='place-list'>
+          </tbody>
+        </table>
+      </div>
+      <button id='btn-save' type="button" class="btn btn-primary">Save</button>
+      <button id='btn-clear' type="button" class="btn btn-link">Clear</button>
+    </div>
+
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script type='text/javascript' src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='res/clients/underscore.js'>
+    </script>
+    <script type='text/javascript' src='res/clients/backbone.js'>
+    </script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
+
+
+    <script type='text/javascript' src='res/js/PlaceModel.js'></script>
+    <script type='text/javascript' src='res/js/PlaceView.js'></script>
+    <script type='text/javascript' src='res/js/PlaceCollection.js'></script>
+    <script type='text/javascript' src='res/js/AppView.js'></script>
+
+    <script>
+      var app = new AppView;
+    </script>
+  </body>
+</html>
