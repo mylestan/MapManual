@@ -47,6 +47,7 @@ var AppView = Backbone.View.extend({
 	newPlace: function(e){
 		console.log('new!');
 		this.places.add({
+			'map': this.map,
 			'latitude': this.latInput.val(),
 			'longitude': this.lngInput.val(),
 			'description': this.descriptionInput.val()

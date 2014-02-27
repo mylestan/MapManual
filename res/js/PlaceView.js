@@ -14,6 +14,14 @@ var PlaceView = Backbone.View.extend({
 	initialize: function(){
 		// Model auto-passed
 
+		// Convert models coordinates to a gmaps latlng
+		this.latlng = new google.maps.LatLng(this.model.get('latitude'), this.model.get('longitude'));
+		// Make the marker
+		this.marker = new google.maps.Marker({
+			position: this.latlng,
+			title: this.model.get('description')
+		});
+
 		// If the model is destroyed, we remove te view
 		this.listenTo(this.model, 'remove', this.remove);
 
@@ -25,12 +33,16 @@ var PlaceView = Backbone.View.extend({
 		this.$el.html(this.template({description: this.model.get('description')}));
 		app.placeList.append(this.$el);
 
+		// Add marker to the map
+		this.marker.setMap(this.model.get('map'));
+
 		return this;
 	},
 
 
 	// Destroy the model
 	clear: function(){
+		this.marker.setMap(null);
 		this.model.destroy();
 	}
 });
